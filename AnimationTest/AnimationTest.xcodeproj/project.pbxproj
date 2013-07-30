@@ -48,6 +48,11 @@
 		2A6EC97C17A8344800B3F427 /* GS.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC97917A8344800B3F427 /* GS.m4a */; };
 		2A6EC97D17A8344800B3F427 /* GS8B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC97A17A8344800B3F427 /* GS8B.mp3 */; };
 		2A6EC98017A8349C00B3F427 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6EC97E17A8349600B3F427 /* AVFoundation.framework */; };
+		2A6EC98717A837B900B3F427 /* icon-iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC98617A837B900B3F427 /* icon-iPhone.png */; };
+		2A6EC98917A837BC00B3F427 /* icon-iPhone-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC98817A837BC00B3F427 /* icon-iPhone-retina.png */; };
+		2A6EC98B17A837E000B3F427 /* icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC98A17A837E000B3F427 /* icon-iPad.png */; };
+		2A6EC98D17A8380600B3F427 /* icon-iPad-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC98C17A8380600B3F427 /* icon-iPad-retina.png */; };
+		2A6EC98F17A8381300B3F427 /* icon-raw.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC98E17A8381300B3F427 /* icon-raw.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +115,11 @@
 		2A6EC97917A8344800B3F427 /* GS.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = GS.m4a; sourceTree = "<group>"; };
 		2A6EC97A17A8344800B3F427 /* GS8B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GS8B.mp3; sourceTree = "<group>"; };
 		2A6EC97E17A8349600B3F427 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2A6EC98617A837B900B3F427 /* icon-iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-iPhone.png"; path = "../icon-iPhone.png"; sourceTree = "<group>"; };
+		2A6EC98817A837BC00B3F427 /* icon-iPhone-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-iPhone-retina.png"; path = "../icon-iPhone-retina.png"; sourceTree = "<group>"; };
+		2A6EC98A17A837E000B3F427 /* icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-iPad.png"; path = "../icon-iPad.png"; sourceTree = "<group>"; };
+		2A6EC98C17A8380600B3F427 /* icon-iPad-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-iPad-retina.png"; path = "../icon-iPad-retina.png"; sourceTree = "<group>"; };
+		2A6EC98E17A8381300B3F427 /* icon-raw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-raw.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +196,7 @@
 		2A6EC91117A8331900B3F427 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2A6EC98117A8377100B3F427 /* App Icons */,
 				2A6EC91217A8331900B3F427 /* AnimationTest-Info.plist */,
 				2A6EC91317A8331900B3F427 /* InfoPlist.strings */,
 				2A6EC91617A8331900B3F427 /* main.m */,
@@ -269,6 +280,18 @@
 				2A6EC96117A8343500B3F427 /* win_16.png */,
 			);
 			name = "Animation Pack";
+			sourceTree = "<group>";
+		};
+		2A6EC98117A8377100B3F427 /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				2A6EC98617A837B900B3F427 /* icon-iPhone.png */,
+				2A6EC98817A837BC00B3F427 /* icon-iPhone-retina.png */,
+				2A6EC98A17A837E000B3F427 /* icon-iPad.png */,
+				2A6EC98C17A8380600B3F427 /* icon-iPad-retina.png */,
+				2A6EC98E17A8381300B3F427 /* icon-raw.png */,
+			);
+			name = "App Icons";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +393,11 @@
 				2A6EC97B17A8344800B3F427 /* PauseFX.m4a in Resources */,
 				2A6EC97C17A8344800B3F427 /* GS.m4a in Resources */,
 				2A6EC97D17A8344800B3F427 /* GS8B.mp3 in Resources */,
+				2A6EC98717A837B900B3F427 /* icon-iPhone.png in Resources */,
+				2A6EC98917A837BC00B3F427 /* icon-iPhone-retina.png in Resources */,
+				2A6EC98B17A837E000B3F427 /* icon-iPad.png in Resources */,
+				2A6EC98D17A8380600B3F427 /* icon-iPad-retina.png in Resources */,
+				2A6EC98F17A8381300B3F427 /* icon-raw.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

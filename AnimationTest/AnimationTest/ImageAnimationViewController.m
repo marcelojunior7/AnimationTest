@@ -369,7 +369,7 @@
     }
 	else
     {
-        [_player setVolume:0.8];
+        [_player setVolume:1];
         [_player play];
     }
     
@@ -431,7 +431,7 @@
     if (_isRealPlaying)
     {
         [_playerReal setVolume:0];
-        [_player setVolume:0.8];
+        [_player setVolume:1];
     }
     else
     {

@@ -44,7 +44,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UxG-50-0t3" kind="push" id="J6P-nV-dXw"/>
+                                    <segue destination="UxG-50-0t3" kind="modal" modalTransitionStyle="flipHorizontal" id="J6P-nV-dXw"/>
                                 </connections>
                             </button>
                         </subviews>
