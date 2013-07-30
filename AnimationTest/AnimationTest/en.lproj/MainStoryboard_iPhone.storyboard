@@ -30,6 +30,13 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon-raw.png" translatesAutoresizingMaskIntoConstraints="NO" id="dCe-KK-7wL">
+                                <color key="backgroundColor" white="1" alpha="0.69000000000000006" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="501" id="BEp-ne-f7b"/>
+                                    <constraint firstAttribute="width" constant="361" id="Hd3-ZI-zbV"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-NX-fSO">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="RbO-PV-X58"/>
@@ -50,8 +57,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="e2D-NX-fSO" firstAttribute="top" secondItem="ota-Wo-tUQ" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Mi8-TI-eJe"/>
-                            <constraint firstItem="e2D-NX-fSO" firstAttribute="leading" secondItem="ota-Wo-tUQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vwW-3B-afu"/>
+                            <constraint firstItem="e2D-NX-fSO" firstAttribute="centerX" secondItem="ota-Wo-tUQ" secondAttribute="centerX" type="default" id="3u7-my-Xe5"/>
+                            <constraint firstItem="e2D-NX-fSO" firstAttribute="top" secondItem="ota-Wo-tUQ" secondAttribute="top" constant="192" id="Mto-0H-BFI"/>
+                            <constraint firstItem="dCe-KK-7wL" firstAttribute="centerY" secondItem="ota-Wo-tUQ" secondAttribute="centerY" type="default" id="akc-jH-tBN"/>
+                            <constraint firstItem="e2D-NX-fSO" firstAttribute="centerX" secondItem="dCe-KK-7wL" secondAttribute="centerX" type="default" id="xg3-pg-iO1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9tq-Pw-G6Y"/>
@@ -183,6 +192,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-raw.png" width="144" height="144"/>
         <image name="play.png" width="903" height="895"/>
         <image name="swap.png" width="300" height="200"/>
     </resources>
