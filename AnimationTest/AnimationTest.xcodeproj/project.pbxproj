@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5785AC17AADD17008F8DEF /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A5785AA17AADD17008F8DEF /* iPhone.png */; };
+		2A5785AD17AADD17008F8DEF /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A5785AB17AADD17008F8DEF /* iPad.png */; };
+		2A5785B017AADD78008F8DEF /* SideScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5785AF17AADD78008F8DEF /* SideScrollerViewController.m */; };
 		2A6EC90B17A8331900B3F427 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6EC90A17A8331900B3F427 /* UIKit.framework */; };
 		2A6EC90D17A8331900B3F427 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6EC90C17A8331900B3F427 /* Foundation.framework */; };
 		2A6EC90F17A8331900B3F427 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6EC90E17A8331900B3F427 /* CoreGraphics.framework */; };
@@ -66,6 +69,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A5785AA17AADD17008F8DEF /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
+		2A5785AB17AADD17008F8DEF /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
+		2A5785AE17AADD78008F8DEF /* SideScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideScrollerViewController.h; sourceTree = "<group>"; };
+		2A5785AF17AADD78008F8DEF /* SideScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideScrollerViewController.m; sourceTree = "<group>"; };
 		2A6EC90717A8331900B3F427 /* AnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6EC90A17A8331900B3F427 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2A6EC90C17A8331900B3F427 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -146,6 +153,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A5785A817AADCD8008F8DEF /* SideScroller */ = {
+			isa = PBXGroup;
+			children = (
+				2A5785A917AADCFF008F8DEF /* Images */,
+				2A5785AE17AADD78008F8DEF /* SideScrollerViewController.h */,
+				2A5785AF17AADD78008F8DEF /* SideScrollerViewController.m */,
+			);
+			name = SideScroller;
+			sourceTree = "<group>";
+		};
+		2A5785A917AADCFF008F8DEF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2A5785AA17AADD17008F8DEF /* iPhone.png */,
+				2A5785AB17AADD17008F8DEF /* iPad.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		2A6EC8FE17A8331900B3F427 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +214,7 @@
 				2A6EC92B17A8331A00B3F427 /* DetailViewController.h */,
 				2A6EC92C17A8331A00B3F427 /* DetailViewController.m */,
 				2A6EC94B17A833F800B3F427 /* GS */,
+				2A5785A817AADCD8008F8DEF /* SideScroller */,
 				2A6EC91117A8331900B3F427 /* Supporting Files */,
 			);
 			path = AnimationTest;
@@ -398,6 +425,8 @@
 				2A6EC98B17A837E000B3F427 /* icon-iPad.png in Resources */,
 				2A6EC98D17A8380600B3F427 /* icon-iPad-retina.png in Resources */,
 				2A6EC98F17A8381300B3F427 /* icon-raw.png in Resources */,
+				2A5785AC17AADD17008F8DEF /* iPhone.png in Resources */,
+				2A5785AD17AADD17008F8DEF /* iPad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +466,7 @@
 				2A6EC92A17A8331A00B3F427 /* MasterViewController.m in Sources */,
 				2A6EC92D17A8331A00B3F427 /* DetailViewController.m in Sources */,
 				2A6EC94E17A8340C00B3F427 /* ImageAnimationViewController.m in Sources */,
+				2A5785B017AADD78008F8DEF /* SideScrollerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +657,7 @@
 				2A6EC94717A8331A00B3F427 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A6EC94817A8331A00B3F427 /* Build configuration list for PBXNativeTarget "AnimationTestTests" */ = {
 			isa = XCConfigurationList;
@@ -635,6 +666,7 @@
 				2A6EC94A17A8331A00B3F427 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
