@@ -11,4 +11,6 @@
 
 @interface SideScrollerViewController : UIViewController
 
+@property (nonatomic) bool shouldRotateDeviceImage;
+
 @end
