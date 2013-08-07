@@ -139,7 +139,7 @@
          [UIView animateWithDuration:0.3 animations:^
           {
               [deviceImage setTransform:CGAffineTransformMakeRotation(((0) * M_PI / 180.0))];
-              [deviceImage setAlpha:0];
+              [deviceImage setAlpha:1];
           }
          completion:^(BOOL finished)
           {
