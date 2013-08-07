@@ -26,7 +26,6 @@
 {
     [super viewDidLoad];
     
-    
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     
     if(orientation == 0 || orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown)
@@ -58,8 +57,13 @@
 {
     [[[self.view subviews] objectAtIndex:[[self.view subviews] count] - 1] removeFromSuperview];
     
-    UIView *viewContainer = [[UIView alloc] init];
+    UIView *viewContainer = [[UIView alloc] initWithFrame:CGRectMake(100, 300, 200, 200)];
     [viewContainer setBackgroundColor:[UIColor lightGrayColor]];
+    
+    [viewContainer.layer setMasksToBounds:YES];
+    [viewContainer.layer setCornerRadius:2.9];
+    
+    
 }
 
 
