@@ -32,17 +32,17 @@
     _shouldRotateDeviceImage = NO;
     _isRotatingDeviceImage = NO;
     
-    UIView *viewContainer = [[UIView alloc] init];
+    UIView *view = [[UIView alloc] init];
         
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
     
     if(orientation == 0 || orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown)
     {
-        viewContainer = [[UIView alloc] initWithFrame:CGRectMake(90, 150, 150, 150)];
-        [viewContainer setBackgroundColor:[UIColor clearColor]];
+        view = [[UIView alloc] initWithFrame:CGRectMake(90, 150, 150, 150)];
+        [view setBackgroundColor:[UIColor clearColor]];
         
-        _viewAlerta = viewContainer;
-        [[self view] addSubview:viewContainer];
+        _viewAlerta = view;
+        [[self view] addSubview:view];
         _shouldRotateDeviceImage = YES;
         [self showPortraitAlert];
     }
@@ -62,8 +62,6 @@
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    //    UIView *viewContainer = [[self.view subviews] objectAtIndex:[[self.view subviews] count] - 1];
-    
     _viewAlerta = [[UIView alloc] init];
     _viewAnimation = [[UIView alloc] init];
     
@@ -76,8 +74,6 @@
     
     if(toInterfaceOrientation == 0 || toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
     {
-//        [_viewAnimation removeFromSuperview];
-        
         UIView *viewContainer = [[UIView alloc] initWithFrame:CGRectMake(90, 150, 150, 150)];
         
         [[self view] addSubview:viewContainer];
@@ -90,35 +86,15 @@
     }
     else
     {
-        //        if (_viewAlerta)
-        //        {
-        //            [UIView animateWithDuration:0.2 animations:^
-        //             {
-        //                 [_viewAlerta setAlpha:0];
-        //             }
-        //            completion:^(BOOL finished)
-        //             {
-        
-//        [_viewAlerta removeFromSuperview];
         [self createAnimationView];
-        
-        //             }
-        //            ];
-        //        }
     }
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-}
 
-
-#pragma render
+#pragma Alerta
 
 - (void)showPortraitAlert
 {
-//    [[[self.view subviews] objectAtIndex:[[self.view subviews] count] - 1] removeFromSuperview];
-    
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 150)];
     [view setBackgroundColor:[UIColor darkGrayColor]];
     [view setAlpha:0.3];
@@ -132,8 +108,6 @@
     [label setText:@"Turn landscape to animate!"];
     [label setTextAlignment:NSTextAlignmentCenter];
     [label setNumberOfLines:2];
-    
-//    UIView *viewContainer = [[self.view subviews] objectAtIndex:[[self.view subviews] count] - 1];
     
     [_viewAlerta setAlpha:0];
 
@@ -184,7 +158,6 @@
 {
     if (_shouldRotateDeviceImage)
     {
-//        UIView *deviceImage = [[[[self.view subviews] objectAtIndex:[[self.view subviews] count] - 1] subviews] objectAtIndex:1];
         UIView *deviceImage = [[_viewAlerta subviews] objectAtIndex:1];
         
         [UIView animateWithDuration:0.3 animations:^
@@ -213,11 +186,16 @@
     }
 }
 
+
+#pragma Animation
+
 - (void)createAnimationView
 {
     UIView *viewAnimation = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     _viewAnimation = viewAnimation;
     [self.view addSubview:viewAnimation];
+    
+    /* FAZER MAIS COISAS AQUI */
 }
 
 @end
