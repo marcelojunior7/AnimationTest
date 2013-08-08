@@ -32,8 +32,11 @@
     _shouldRotateDeviceImage = NO;
     _isRotatingDeviceImage = NO;
     
-    _viewHeight = 0;
-    _viewWidth = 0;
+//    _viewHeight = 0;
+//    _viewWidth = 0;
+
+    _viewWidth = self.view.bounds.size.width;
+    _viewHeight = self.view.bounds.size.height;
     
     _sidescrollTimer = nil;
     
@@ -101,11 +104,11 @@
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
+    _viewWidth = self.view.bounds.size.width;
+    _viewHeight = self.view.bounds.size.height;
+    
     if(fromInterfaceOrientation == 0 || fromInterfaceOrientation == UIInterfaceOrientationPortrait || fromInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
     {
-        _viewWidth = self.view.bounds.size.width;
-        _viewHeight = self.view.bounds.size.height;
-        
         [self createAnimationView];
     }
     else
@@ -119,6 +122,8 @@
 
 - (void)showPortraitAlert
 {
+    [_viewAlerta setFrame:CGRectMake(_viewWidth / 2 - 75, _viewHeight / 2 - 100, 150, 150)];
+    
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 150)];
     [view setBackgroundColor:[UIColor darkGrayColor]];
     [view setAlpha:0.3];
@@ -215,6 +220,7 @@
 
 - (void)createAnimationView
 {
+    // CONTAINER ============================================================================
     UIView *viewAnimation = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _viewWidth, _viewHeight)];
     [viewAnimation setBackgroundColor:[UIColor clearColor]];
     _viewAnimation = viewAnimation;
@@ -228,7 +234,7 @@
     
     
     // GROUND ===============================================================================
-    UIView *ground = [[UIView alloc] initWithFrame:CGRectMake(0, _viewHeight - 50, _viewWidth * 3, 50)];
+    UIView *ground = [[UIView alloc] initWithFrame:CGRectMake(0, _viewHeight - 30, _viewWidth * 3, 30)];
     
     for (int i = 0; _viewWidth * 3 > i; i+=30)
     {
@@ -255,7 +261,7 @@
     }
     
     UIImageView *animationImageView = [[UIImageView alloc] init];
-    animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_viewWidth - 70, 220, 55, 55)];
+    animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_viewWidth, _viewHeight - 75, 55, 55)];
     
     animationImageView.animationImages = images;
     animationImageView.animationDuration = 0.3;
@@ -263,10 +269,18 @@
     [_viewAnimation addSubview:animationImageView];
     [animationImageView startAnimating];
     
-    
     // ANIMATION ===========================================================================
     _sidescrollTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0) target:self selector:@selector(scrollGround) userInfo:nil repeats:YES];
-    [self performSelector:@selector(moveSpritePosition) withObject:nil afterDelay:1.5];
+    
+    [UIView animateWithDuration:1.5 animations:^
+     {
+        [[[_viewAnimation subviews] objectAtIndex:2] setFrame:CGRectMake(_viewWidth - 55, _viewHeight - 75, 55, 55)];
+     }
+    completion:^(BOOL finished)
+     {
+        [self performSelector:@selector(moveSpritePosition) withObject:nil afterDelay:1.5];
+     }
+    ];
 }
 
 -(void)scrollGround
@@ -285,7 +299,7 @@
 - (void)moveSpritePosition
 {
     [UIView animateWithDuration:5.5 animations:^ {
-         [[[_viewAnimation subviews] objectAtIndex:2] setFrame:CGRectMake(_viewWidth / 2, 220, 55, 55)];
+         [[[_viewAnimation subviews] objectAtIndex:2] setFrame:CGRectMake(_viewWidth / 2 - 55, _viewHeight - 75, 55, 55)];
      } completion:nil];
 }
 
