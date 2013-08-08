@@ -228,7 +228,7 @@
     
     
     // GROUND ===============================================================================
-    UIView *ground = [[UIView alloc] initWithFrame:CGRectMake(0, 270, _viewWidth * 3, _viewHeight / 10)];
+    UIView *ground = [[UIView alloc] initWithFrame:CGRectMake(0, _viewHeight - 50, _viewWidth * 3, 50)];
     
     for (int i = 0; _viewWidth * 3 > i; i+=30)
     {
@@ -267,8 +267,6 @@
     // ANIMATION ===========================================================================
     _sidescrollTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0) target:self selector:@selector(scrollGround) userInfo:nil repeats:YES];
     [self performSelector:@selector(moveSpritePosition) withObject:nil afterDelay:1.5];
-    
-    /* FAZER MAIS COISAS AQUI */
 }
 
 -(void)scrollGround
