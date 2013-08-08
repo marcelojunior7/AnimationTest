@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A57150217B3F07000BB865B /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150117B3F07000BB865B /* ground.png */; };
+		2A57150417B3F23300BB865B /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150317B3F23300BB865B /* back.png */; };
+		2A57150C17B3F5E000BB865B /* sonic-running-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150617B3F5E000BB865B /* sonic-running-1.png */; };
+		2A57150D17B3F5E000BB865B /* sonic-running-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150717B3F5E000BB865B /* sonic-running-2.png */; };
+		2A57150E17B3F5E000BB865B /* sonic-running-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150817B3F5E000BB865B /* sonic-running-3.png */; };
+		2A57150F17B3F5E000BB865B /* sonic-running-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150917B3F5E000BB865B /* sonic-running-4.png */; };
+		2A57151017B3F5E000BB865B /* sonic-running-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150A17B3F5E000BB865B /* sonic-running-5.png */; };
+		2A57151117B3F5E000BB865B /* sonic-running-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150B17B3F5E000BB865B /* sonic-running-6.png */; };
 		2A5785B017AADD78008F8DEF /* SideScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5785AF17AADD78008F8DEF /* SideScrollerViewController.m */; };
 		2A6EC90B17A8331900B3F427 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6EC90A17A8331900B3F427 /* UIKit.framework */; };
 		2A6EC90D17A8331900B3F427 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6EC90C17A8331900B3F427 /* Foundation.framework */; };
@@ -71,6 +79,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A57150117B3F07000BB865B /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
+		2A57150317B3F23300BB865B /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		2A57150617B3F5E000BB865B /* sonic-running-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-running-1.png"; sourceTree = "<group>"; };
+		2A57150717B3F5E000BB865B /* sonic-running-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-running-2.png"; sourceTree = "<group>"; };
+		2A57150817B3F5E000BB865B /* sonic-running-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-running-3.png"; sourceTree = "<group>"; };
+		2A57150917B3F5E000BB865B /* sonic-running-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-running-4.png"; sourceTree = "<group>"; };
+		2A57150A17B3F5E000BB865B /* sonic-running-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-running-5.png"; sourceTree = "<group>"; };
+		2A57150B17B3F5E000BB865B /* sonic-running-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-running-6.png"; sourceTree = "<group>"; };
 		2A5785AE17AADD78008F8DEF /* SideScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideScrollerViewController.h; sourceTree = "<group>"; };
 		2A5785AF17AADD78008F8DEF /* SideScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideScrollerViewController.m; sourceTree = "<group>"; };
 		2A6EC90717A8331900B3F427 /* AnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +174,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A5714FE17B3E19A00BB865B /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				2AE7456317B1729D00CB1205 /* iPodTouch.png */,
+				2AE7456417B1729D00CB1205 /* iPad.png */,
+				2AE7456517B1729D00CB1205 /* iPhone.png */,
+			);
+			name = Devices;
+			sourceTree = "<group>";
+		};
+		2A57150517B3F5D400BB865B /* Sonic Running */ = {
+			isa = PBXGroup;
+			children = (
+				2A57150617B3F5E000BB865B /* sonic-running-1.png */,
+				2A57150717B3F5E000BB865B /* sonic-running-2.png */,
+				2A57150817B3F5E000BB865B /* sonic-running-3.png */,
+				2A57150917B3F5E000BB865B /* sonic-running-4.png */,
+				2A57150A17B3F5E000BB865B /* sonic-running-5.png */,
+				2A57150B17B3F5E000BB865B /* sonic-running-6.png */,
+			);
+			name = "Sonic Running";
+			sourceTree = "<group>";
+		};
 		2A5785A817AADCD8008F8DEF /* SideScroller */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,9 +210,10 @@
 		2A5785A917AADCFF008F8DEF /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2AE7456317B1729D00CB1205 /* iPodTouch.png */,
-				2AE7456417B1729D00CB1205 /* iPad.png */,
-				2AE7456517B1729D00CB1205 /* iPhone.png */,
+				2A57150117B3F07000BB865B /* ground.png */,
+				2A57150317B3F23300BB865B /* back.png */,
+				2A57150517B3F5D400BB865B /* Sonic Running */,
+				2A5714FE17B3E19A00BB865B /* Devices */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -435,6 +475,14 @@
 				2AE7456617B1729D00CB1205 /* iPodTouch.png in Resources */,
 				2AE7456717B1729D00CB1205 /* iPad.png in Resources */,
 				2AE7456817B1729D00CB1205 /* iPhone.png in Resources */,
+				2A57150217B3F07000BB865B /* ground.png in Resources */,
+				2A57150417B3F23300BB865B /* back.png in Resources */,
+				2A57150C17B3F5E000BB865B /* sonic-running-1.png in Resources */,
+				2A57150D17B3F5E000BB865B /* sonic-running-2.png in Resources */,
+				2A57150E17B3F5E000BB865B /* sonic-running-3.png in Resources */,
+				2A57150F17B3F5E000BB865B /* sonic-running-4.png in Resources */,
+				2A57151017B3F5E000BB865B /* sonic-running-5.png in Resources */,
+				2A57151117B3F5E000BB865B /* sonic-running-6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

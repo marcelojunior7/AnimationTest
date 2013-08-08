@@ -32,6 +32,11 @@
     _shouldRotateDeviceImage = NO;
     _isRotatingDeviceImage = NO;
     
+    _viewHeight = 0;
+    _viewWidth = 0;
+    
+    _sidescrollTimer = nil;
+    
     UIView *view = [[UIView alloc] init];
         
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
@@ -48,6 +53,9 @@
     }
     else
     {
+        _viewWidth = self.view.bounds.size.width;
+        _viewHeight = self.view.bounds.size.height;
+        
         [self createAnimationView];
     }
 }
@@ -67,6 +75,12 @@
     
     _shouldRotateDeviceImage = NO;
     
+    if(_sidescrollTimer)
+    {
+        [_sidescrollTimer invalidate];
+        _sidescrollTimer = nil;
+    }
+    
     for (int i = 0; [[[self view] subviews] count] > i; i++)
     {
         [[[[self view] subviews] objectAtIndex:i] removeFromSuperview];
@@ -82,11 +96,21 @@
         [viewContainer setBackgroundColor:[UIColor clearColor]];
         
         _shouldRotateDeviceImage = YES;
-        [self showPortraitAlert];
+    }
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    if(fromInterfaceOrientation == 0 || fromInterfaceOrientation == UIInterfaceOrientationPortrait || fromInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
+    {
+        _viewWidth = self.view.bounds.size.width;
+        _viewHeight = self.view.bounds.size.height;
+        
+        [self createAnimationView];
     }
     else
     {
-        [self createAnimationView];
+        [self showPortraitAlert];
     }
 }
 
@@ -191,11 +215,80 @@
 
 - (void)createAnimationView
 {
-    UIView *viewAnimation = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    UIView *viewAnimation = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _viewWidth, _viewHeight)];
+    [viewAnimation setBackgroundColor:[UIColor clearColor]];
     _viewAnimation = viewAnimation;
     [self.view addSubview:viewAnimation];
     
+    
+    // BACK =================================================================================
+    UIImageView *back = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back.png"]];
+    [back setFrame:CGRectMake(0, 0, _viewWidth, _viewHeight)];
+    [_viewAnimation addSubview:back];
+    
+    
+    // GROUND ===============================================================================
+    UIView *ground = [[UIView alloc] initWithFrame:CGRectMake(0, 270, _viewWidth * 3, _viewHeight / 10)];
+    
+    for (int i = 0; _viewWidth * 3 > i; i+=30)
+    {
+        UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ground.png"]];
+        [bg setFrame:CGRectMake(i, 0, 30, 30)];
+        [ground addSubview:bg];
+    }
+
+    ground.center = CGPointMake(200, ground.center.y);
+    
+    [_viewAnimation addSubview:ground];
+    _ground = ground;
+    
+    
+    // SPRITE ===============================================================================
+    NSArray *imageNames = @[@"sonic-running-1.png", @"sonic-running-2.png", @"sonic-running-3.png", @"sonic-running-4.png",
+                            @"sonic-running-5.png"];
+    
+    NSMutableArray *images = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < imageNames.count; i++)
+    {
+        [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
+    }
+    
+    UIImageView *animationImageView = [[UIImageView alloc] init];
+    animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_viewWidth - 70, 220, 55, 55)];
+    
+    animationImageView.animationImages = images;
+    animationImageView.animationDuration = 0.3;
+    
+    [_viewAnimation addSubview:animationImageView];
+    [animationImageView startAnimating];
+    
+    
+    // ANIMATION ===========================================================================
+    _sidescrollTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0) target:self selector:@selector(scrollGround) userInfo:nil repeats:YES];
+    [self performSelector:@selector(moveSpritePosition) withObject:nil afterDelay:1.5];
+    
     /* FAZER MAIS COISAS AQUI */
+}
+
+-(void)scrollGround
+{
+    float oldX = _ground.center.x + 3.0;
+    float newX = oldX;
+    
+    if (oldX > 620.0)
+    {
+        newX = 200;
+    }
+    
+    _ground.center = CGPointMake(newX, _ground.center.y);
+}
+
+- (void)moveSpritePosition
+{
+    [UIView animateWithDuration:5.5 animations:^ {
+         [[[_viewAnimation subviews] objectAtIndex:2] setFrame:CGRectMake(_viewWidth / 2, 220, 55, 55)];
+     } completion:nil];
 }
 
 @end
