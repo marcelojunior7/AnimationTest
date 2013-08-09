@@ -63,6 +63,16 @@
 		2A6EC98B17A837E000B3F427 /* icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC98A17A837E000B3F427 /* icon-iPad.png */; };
 		2A6EC98D17A8380600B3F427 /* icon-iPad-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC98C17A8380600B3F427 /* icon-iPad-retina.png */; };
 		2A6EC98F17A8381300B3F427 /* icon-raw.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC98E17A8381300B3F427 /* icon-raw.png */; };
+		2A6FADDB17B544CF005E330B /* sonic-landing-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FADD817B544CF005E330B /* sonic-landing-1.png */; };
+		2A6FADDC17B544CF005E330B /* sonic-landing-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FADD917B544CF005E330B /* sonic-landing-2.png */; };
+		2A6FADDD17B544CF005E330B /* sonic-landing-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FADDA17B544CF005E330B /* sonic-landing-3.png */; };
+		2A6FADE417B544D8005E330B /* sonic-jumping-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FADDE17B544D8005E330B /* sonic-jumping-1.png */; };
+		2A6FADE517B544D8005E330B /* sonic-jumping-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FADDF17B544D8005E330B /* sonic-jumping-2.png */; };
+		2A6FADE617B544D8005E330B /* sonic-jumping-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FADE017B544D8005E330B /* sonic-jumping-3.png */; };
+		2A6FADE717B544D8005E330B /* sonic-jumping-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FADE117B544D8005E330B /* sonic-jumping-4.png */; };
+		2A6FADE817B544D8005E330B /* sonic-jumping-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FADE217B544D8005E330B /* sonic-jumping-5.png */; };
+		2A6FADE917B544D8005E330B /* sonic-jumping-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FADE317B544D8005E330B /* sonic-jumping-6.png */; };
+		2A6FADEC17B54BC5005E330B /* JumpFX.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6FADEB17B54BC5005E330B /* JumpFX.mp3 */; };
 		2AE7456217B1702E00CB1205 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE7456017B1702600CB1205 /* QuartzCore.framework */; };
 		2AE7456617B1729D00CB1205 /* iPodTouch.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE7456317B1729D00CB1205 /* iPodTouch.png */; };
 		2AE7456717B1729D00CB1205 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE7456417B1729D00CB1205 /* iPad.png */; };
@@ -145,6 +155,16 @@
 		2A6EC98A17A837E000B3F427 /* icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-iPad.png"; path = "../icon-iPad.png"; sourceTree = "<group>"; };
 		2A6EC98C17A8380600B3F427 /* icon-iPad-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-iPad-retina.png"; path = "../icon-iPad-retina.png"; sourceTree = "<group>"; };
 		2A6EC98E17A8381300B3F427 /* icon-raw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-raw.png"; sourceTree = "<group>"; };
+		2A6FADD817B544CF005E330B /* sonic-landing-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-landing-1.png"; sourceTree = "<group>"; };
+		2A6FADD917B544CF005E330B /* sonic-landing-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-landing-2.png"; sourceTree = "<group>"; };
+		2A6FADDA17B544CF005E330B /* sonic-landing-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-landing-3.png"; sourceTree = "<group>"; };
+		2A6FADDE17B544D8005E330B /* sonic-jumping-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-jumping-1.png"; sourceTree = "<group>"; };
+		2A6FADDF17B544D8005E330B /* sonic-jumping-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-jumping-2.png"; sourceTree = "<group>"; };
+		2A6FADE017B544D8005E330B /* sonic-jumping-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-jumping-3.png"; sourceTree = "<group>"; };
+		2A6FADE117B544D8005E330B /* sonic-jumping-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-jumping-4.png"; sourceTree = "<group>"; };
+		2A6FADE217B544D8005E330B /* sonic-jumping-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-jumping-5.png"; sourceTree = "<group>"; };
+		2A6FADE317B544D8005E330B /* sonic-jumping-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-jumping-6.png"; sourceTree = "<group>"; };
+		2A6FADEB17B54BC5005E330B /* JumpFX.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = JumpFX.mp3; sourceTree = "<group>"; };
 		2AE7456017B1702600CB1205 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2AE7456317B1729D00CB1205 /* iPodTouch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPodTouch.png; sourceTree = "<group>"; };
 		2AE7456417B1729D00CB1205 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
@@ -203,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				2A5785A917AADCFF008F8DEF /* Images */,
+				2A6FADEA17B54B98005E330B /* Media */,
 				2A5785AE17AADD78008F8DEF /* SideScrollerViewController.h */,
 				2A5785AF17AADD78008F8DEF /* SideScrollerViewController.m */,
 			);
@@ -215,6 +236,8 @@
 				2A57150117B3F07000BB865B /* ground.png */,
 				2A57150317B3F23300BB865B /* back.png */,
 				2A57151217B4402200BB865B /* Sonic Sprites RAW.png */,
+				2A6FADD617B51B3C005E330B /* Sonic Jumping */,
+				2A6FADD717B544AD005E330B /* Sonic Landing */,
 				2A57150517B3F5D400BB865B /* Sonic Running */,
 				2A5714FE17B3E19A00BB865B /* Devices */,
 			);
@@ -371,6 +394,37 @@
 			name = "App Icons";
 			sourceTree = "<group>";
 		};
+		2A6FADD617B51B3C005E330B /* Sonic Jumping */ = {
+			isa = PBXGroup;
+			children = (
+				2A6FADDE17B544D8005E330B /* sonic-jumping-1.png */,
+				2A6FADDF17B544D8005E330B /* sonic-jumping-2.png */,
+				2A6FADE017B544D8005E330B /* sonic-jumping-3.png */,
+				2A6FADE117B544D8005E330B /* sonic-jumping-4.png */,
+				2A6FADE217B544D8005E330B /* sonic-jumping-5.png */,
+				2A6FADE317B544D8005E330B /* sonic-jumping-6.png */,
+			);
+			name = "Sonic Jumping";
+			sourceTree = "<group>";
+		};
+		2A6FADD717B544AD005E330B /* Sonic Landing */ = {
+			isa = PBXGroup;
+			children = (
+				2A6FADD817B544CF005E330B /* sonic-landing-1.png */,
+				2A6FADD917B544CF005E330B /* sonic-landing-2.png */,
+				2A6FADDA17B544CF005E330B /* sonic-landing-3.png */,
+			);
+			name = "Sonic Landing";
+			sourceTree = "<group>";
+		};
+		2A6FADEA17B54B98005E330B /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				2A6FADEB17B54BC5005E330B /* JumpFX.mp3 */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -487,6 +541,16 @@
 				2A57151017B3F5E000BB865B /* sonic-running-5.png in Resources */,
 				2A57151117B3F5E000BB865B /* sonic-running-6.png in Resources */,
 				2A57151317B4402200BB865B /* Sonic Sprites RAW.png in Resources */,
+				2A6FADDB17B544CF005E330B /* sonic-landing-1.png in Resources */,
+				2A6FADDC17B544CF005E330B /* sonic-landing-2.png in Resources */,
+				2A6FADDD17B544CF005E330B /* sonic-landing-3.png in Resources */,
+				2A6FADE417B544D8005E330B /* sonic-jumping-1.png in Resources */,
+				2A6FADE517B544D8005E330B /* sonic-jumping-2.png in Resources */,
+				2A6FADE617B544D8005E330B /* sonic-jumping-3.png in Resources */,
+				2A6FADE717B544D8005E330B /* sonic-jumping-4.png in Resources */,
+				2A6FADE817B544D8005E330B /* sonic-jumping-5.png in Resources */,
+				2A6FADE917B544D8005E330B /* sonic-jumping-6.png in Resources */,
+				2A6FADEC17B54BC5005E330B /* JumpFX.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
