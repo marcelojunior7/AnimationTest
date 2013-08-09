@@ -26,7 +26,6 @@
 {
     [super viewDidLoad];
     
-    
     // VARIABLES INITIALIZATION ============================================================================================
     _viewAlerta = [[UIView alloc] init];
     _viewAnimation = [[UIView alloc] init];
@@ -329,107 +328,96 @@
 {
     CGPoint touchLocation = [recognizer locationInView:[recognizer.view superview]];
     
-    // LOG TEST ======================================================================================
-    NSString *tapLog = @"Tap";
-    
-    if (CGRectContainsPoint([[[_viewAnimation subviews] objectAtIndex:2] frame], touchLocation))
+    if (CGRectContainsPoint([[[_viewAnimation subviews] objectAtIndex:2] frame], touchLocation)) // TAP ON SPRITE
     {
-        // TAP ON SPRITE STUFF GOES HERE
-        tapLog = @"Tap on sprite";
-    }
-    
-    NSLog(@"%@", tapLog);
-    
-    
-    
-    // REAL BUSINESS =================================================================================
-    if (!_isTapped)
-    {
-        _currentX = [[[_viewAnimation subviews] objectAtIndex:2] frame].origin.x;
-        _isTapped = YES;
-        NSArray *imageNames = @[@"sonic-jumping-1.png", @"sonic-jumping-2.png", @"sonic-jumping-3.png", @"sonic-jumping-4.png",
-                                @"sonic-jumping-5.png", @"sonic-jumping-6.png"];
-        
-        NSMutableArray *images = [[NSMutableArray alloc] init];
-        
-        for (int i = 0; i < imageNames.count; i++)
+        if (!_isTapped)
         {
-            [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
-        }
-        
-        UIImageView *animationImageView = [[UIImageView alloc] init];
-        animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_currentX, [[[_viewAnimation subviews] objectAtIndex:2] frame].origin.y, 50, 55)];
-        
-        animationImageView.animationImages = images;
-        animationImageView.animationDuration = 0.3;
-        
-        [[[_viewAnimation subviews] objectAtIndex:2] removeFromSuperview];
-        [_viewAnimation addSubview:animationImageView];
-        [animationImageView startAnimating];
-        
-        [UIView animateWithDuration:0.7 animations:^
-         {
-             [_playerJump play];
-             [animationImageView setFrame:CGRectMake(_currentX - 5, _viewHeight / 2, 50, 55)];
-         }
-        completion:^(BOOL finished)
-         {
-             [UIView animateWithDuration:0.6 animations:^
-              {
-                  [animationImageView setFrame:CGRectMake(_currentX, _viewHeight -75, 50, 55)];
-              }
-             completion:^(BOOL finished)
-              {
-                  [UIView animateWithDuration:0.5 animations:^
-                   {
-                       [animationImageView setFrame:CGRectMake(_currentX, _viewHeight - (_viewHeight / 2), 55, 55)];
-                       
-                       NSArray *landingImageNames = @[@"sonic-landing-1.png", @"sonic-landing-2.png", @"sonic-landing-3.png"];
-                       
-                       NSMutableArray *landingImages = [[NSMutableArray alloc] init];
-                       
-                       for (int i = 0; i < landingImageNames.count; i++)
+            _currentX = [[[_viewAnimation subviews] objectAtIndex:2] frame].origin.x;
+            _isTapped = YES;
+            NSArray *imageNames = @[@"sonic-jumping-1.png", @"sonic-jumping-2.png", @"sonic-jumping-3.png", @"sonic-jumping-4.png",
+                                    @"sonic-jumping-5.png", @"sonic-jumping-6.png"];
+            
+            NSMutableArray *images = [[NSMutableArray alloc] init];
+            
+            for (int i = 0; i < imageNames.count; i++)
+            {
+                [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
+            }
+            
+            UIImageView *animationImageView = [[UIImageView alloc] init];
+            animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_currentX, [[[_viewAnimation subviews] objectAtIndex:2] frame].origin.y, 50, 55)];
+            
+            animationImageView.animationImages = images;
+            animationImageView.animationDuration = 0.3;
+            
+            [[[_viewAnimation subviews] objectAtIndex:2] removeFromSuperview];
+            [_viewAnimation addSubview:animationImageView];
+            [animationImageView startAnimating];
+            
+            [UIView animateWithDuration:0.7 animations:^
+             {
+                 [_playerJump play];
+                 [animationImageView setFrame:CGRectMake(_currentX - 5, _viewHeight / 2, 50, 55)];
+             }
+            completion:^(BOOL finished)
+             {
+                 [UIView animateWithDuration:0.6 animations:^
+                  {
+                      [animationImageView setFrame:CGRectMake(_currentX, _viewHeight -75, 50, 55)];
+                  }
+                 completion:^(BOOL finished)
+                  {
+                      [UIView animateWithDuration:0.5 animations:^
                        {
-                           [landingImages addObject:[UIImage imageNamed:[landingImageNames objectAtIndex:i]]];
+                           [animationImageView setFrame:CGRectMake(_currentX, _viewHeight - (_viewHeight / 2), 55, 55)];
+                           
+                           NSArray *landingImageNames = @[@"sonic-landing-1.png", @"sonic-landing-2.png", @"sonic-landing-3.png"];
+                           
+                           NSMutableArray *landingImages = [[NSMutableArray alloc] init];
+                           
+                           for (int i = 0; i < landingImageNames.count; i++)
+                           {
+                               [landingImages addObject:[UIImage imageNamed:[landingImageNames objectAtIndex:i]]];
+                           }
+                           
+                           UIImageView *landingAnimationImageView = [[UIImageView alloc] init];
+                           landingAnimationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_currentX, _viewHeight - 75, 55, 55)];
+                           
+                           landingAnimationImageView.animationImages = landingImages;
+                           landingAnimationImageView.animationDuration = 0.3;
+                           
+                           [animationImageView removeFromSuperview];
+                           [_viewAnimation addSubview:landingAnimationImageView];
                        }
-                       
-                       UIImageView *landingAnimationImageView = [[UIImageView alloc] init];
-                       landingAnimationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_currentX, _viewHeight - 75, 55, 55)];
-                       
-                       landingAnimationImageView.animationImages = landingImages;
-                       landingAnimationImageView.animationDuration = 0.3;
-                       
-                       [animationImageView removeFromSuperview];
-                       [_viewAnimation addSubview:landingAnimationImageView];
-                   }
-                  completion:^(BOOL finished)
-                   {
-                      NSArray *spriteImageNames = @[@"sonic-running-1.png", @"sonic-running-2.png", @"sonic-running-3.png", @"sonic-running-4.png",
-                                              @"sonic-running-5.png"];
-                      
-                      NSMutableArray *spriteImages = [[NSMutableArray alloc] init];
-                      
-                      for (int i = 0; i < spriteImageNames.count; i++)
-                      {
-                          [spriteImages addObject:[UIImage imageNamed:[spriteImageNames objectAtIndex:i]]];
-                      }
-                      
-                      UIImageView *spriteAnimationImageView = [[UIImageView alloc] init];
-                      spriteAnimationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_currentX, _viewHeight - 75, 55, 55)];
-                      
-                      spriteAnimationImageView.animationImages = spriteImages;
-                      spriteAnimationImageView.animationDuration = 0.3;
-                      
-                      [[[_viewAnimation subviews] objectAtIndex:2] removeFromSuperview];
-                      [_viewAnimation addSubview:spriteAnimationImageView];
-                      [spriteAnimationImageView startAnimating];
-                      _isTapped = NO;
-                   }
-                  ];
-              }
+                      completion:^(BOOL finished)
+                       {
+                           NSArray *spriteImageNames = @[@"sonic-running-1.png", @"sonic-running-2.png", @"sonic-running-3.png", @"sonic-running-4.png",
+                                                         @"sonic-running-5.png"];
+                           
+                           NSMutableArray *spriteImages = [[NSMutableArray alloc] init];
+                           
+                           for (int i = 0; i < spriteImageNames.count; i++)
+                           {
+                               [spriteImages addObject:[UIImage imageNamed:[spriteImageNames objectAtIndex:i]]];
+                           }
+                           
+                           UIImageView *spriteAnimationImageView = [[UIImageView alloc] init];
+                           spriteAnimationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_currentX, _viewHeight - 75, 55, 55)];
+                           
+                           spriteAnimationImageView.animationImages = spriteImages;
+                           spriteAnimationImageView.animationDuration = 0.3;
+                           
+                           [[[_viewAnimation subviews] objectAtIndex:2] removeFromSuperview];
+                           [_viewAnimation addSubview:spriteAnimationImageView];
+                           [spriteAnimationImageView startAnimating];
+                           _isTapped = NO;
+                       }
+                      ];
+                  }
+                 ];
+             }
             ];
-         }
-        ];
+        }
     }
 }
 

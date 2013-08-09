@@ -39,8 +39,8 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-NX-fSO">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="RbO-PV-X58"/>
-                                    <constraint firstAttribute="width" constant="81" id="TgN-Qj-jkw"/>
+                                    <constraint firstAttribute="height" constant="80" id="4a8-tg-GAc"/>
+                                    <constraint firstAttribute="width" constant="80" id="hBR-q1-yAQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="GS">
@@ -54,9 +54,9 @@
                                     <segue destination="UxG-50-0t3" kind="modal" modalTransitionStyle="flipHorizontal" id="J6P-nV-dXw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-QL-8tW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLR-19-GRw">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="Ihq-dQ-7bL"/>
+                                    <constraint firstAttribute="height" constant="80" id="r5G-c5-XPX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="SS">
@@ -67,20 +67,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="YFh-kk-7Bw" kind="push" id="I19-gL-gUP"/>
+                                    <segue destination="YFh-kk-7Bw" kind="push" id="YJ6-CJ-eIg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="e2D-NX-fSO" firstAttribute="top" secondItem="ota-Wo-tUQ" secondAttribute="top" constant="134" id="Mf3-sx-fjO"/>
+                            <constraint firstItem="dCe-KK-7wL" firstAttribute="centerX" secondItem="ota-Wo-tUQ" secondAttribute="centerX" type="default" id="4cN-n3-oW1"/>
+                            <constraint firstItem="QLR-19-GRw" firstAttribute="trailing" secondItem="e2D-NX-fSO" secondAttribute="trailing" type="default" id="T2o-Sw-Rln"/>
+                            <constraint firstItem="QLR-19-GRw" firstAttribute="leading" secondItem="e2D-NX-fSO" secondAttribute="leading" type="default" id="XlM-Ch-dFZ"/>
                             <constraint firstItem="dCe-KK-7wL" firstAttribute="centerY" secondItem="ota-Wo-tUQ" secondAttribute="centerY" type="default" id="akc-jH-tBN"/>
-                            <constraint firstAttribute="bottom" secondItem="LgA-QL-8tW" secondAttribute="bottom" constant="135" id="bHR-z8-jen"/>
-                            <constraint firstItem="e2D-NX-fSO" firstAttribute="trailing" secondItem="LgA-QL-8tW" secondAttribute="trailing" type="default" id="eM6-lP-OPP"/>
-                            <constraint firstItem="LgA-QL-8tW" firstAttribute="centerX" secondItem="dCe-KK-7wL" secondAttribute="centerX" type="default" id="pxC-Z5-bvb"/>
-                            <constraint firstItem="LgA-QL-8tW" firstAttribute="centerX" secondItem="ota-Wo-tUQ" secondAttribute="centerX" type="default" id="t1f-ed-xes"/>
-                            <constraint firstItem="e2D-NX-fSO" firstAttribute="leading" secondItem="LgA-QL-8tW" secondAttribute="leading" type="default" id="u9z-9F-fTO"/>
-                            <constraint firstItem="e2D-NX-fSO" firstAttribute="baseline" secondItem="LgA-QL-8tW" secondAttribute="baseline" type="default" id="uyp-oZ-ZjS"/>
+                            <constraint firstItem="dCe-KK-7wL" firstAttribute="centerX" secondItem="QLR-19-GRw" secondAttribute="centerX" type="default" id="dcz-dS-E1z"/>
+                            <constraint firstAttribute="bottom" secondItem="QLR-19-GRw" secondAttribute="bottom" constant="130" id="oSS-5O-1lC"/>
+                            <constraint firstItem="e2D-NX-fSO" firstAttribute="top" secondItem="ota-Wo-tUQ" secondAttribute="top" constant="132" id="pxS-l1-T35"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9tq-Pw-G6Y"/>
