@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1852F53B17E098800074DC72 /* ParallaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1852F53A17E098800074DC72 /* ParallaxViewController.m */; };
+		1852F53E17E098D10074DC72 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1852F53D17E098D10074DC72 /* MainViewController.m */; };
+		1852F54217E0993D0074DC72 /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1852F54117E0993D0074DC72 /* MainCell.m */; };
 		2A57150217B3F07000BB865B /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150117B3F07000BB865B /* ground.png */; };
 		2A57150417B3F23300BB865B /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150317B3F23300BB865B /* back.png */; };
 		2A57150C17B3F5E000BB865B /* sonic-running-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A57150617B3F5E000BB865B /* sonic-running-1.png */; };
@@ -90,6 +93,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1852F53917E098800074DC72 /* ParallaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxViewController.h; sourceTree = "<group>"; };
+		1852F53A17E098800074DC72 /* ParallaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxViewController.m; sourceTree = "<group>"; };
+		1852F53C17E098D10074DC72 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1852F53D17E098D10074DC72 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1852F54017E0993D0074DC72 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
+		1852F54117E0993D0074DC72 /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
 		2A57150117B3F07000BB865B /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
 		2A57150317B3F23300BB865B /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		2A57150617B3F5E000BB865B /* sonic-running-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-running-1.png"; sourceTree = "<group>"; };
@@ -196,6 +205,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1852F53817E098280074DC72 /* Parallax */ = {
+			isa = PBXGroup;
+			children = (
+				1852F53917E098800074DC72 /* ParallaxViewController.h */,
+				1852F53A17E098800074DC72 /* ParallaxViewController.m */,
+			);
+			name = Parallax;
+			sourceTree = "<group>";
+		};
+		1852F53F17E099200074DC72 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1852F53C17E098D10074DC72 /* MainViewController.h */,
+				1852F53D17E098D10074DC72 /* MainViewController.m */,
+				1852F54017E0993D0074DC72 /* MainCell.h */,
+				1852F54117E0993D0074DC72 /* MainCell.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		2A5714FE17B3E19A00BB865B /* Devices */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,8 +315,10 @@
 				2A6EC92917A8331A00B3F427 /* MasterViewController.m */,
 				2A6EC92B17A8331A00B3F427 /* DetailViewController.h */,
 				2A6EC92C17A8331A00B3F427 /* DetailViewController.m */,
+				1852F53F17E099200074DC72 /* Main */,
 				2A6EC94B17A833F800B3F427 /* GS */,
 				2A5785A817AADCD8008F8DEF /* SideScroller */,
+				1852F53817E098280074DC72 /* Parallax */,
 				2A6EC91117A8331900B3F427 /* Supporting Files */,
 			);
 			path = AnimationTest;
@@ -591,6 +622,9 @@
 				2A6EC92D17A8331A00B3F427 /* DetailViewController.m in Sources */,
 				2A6EC94E17A8340C00B3F427 /* ImageAnimationViewController.m in Sources */,
 				2A5785B017AADD78008F8DEF /* SideScrollerViewController.m in Sources */,
+				1852F53B17E098800074DC72 /* ParallaxViewController.m in Sources */,
+				1852F53E17E098D10074DC72 /* MainViewController.m in Sources */,
+				1852F54217E0993D0074DC72 /* MainCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
