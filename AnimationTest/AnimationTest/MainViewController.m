@@ -32,6 +32,7 @@
     [_arrayButtons addObject:@"Gangnam Style"];
     [_arrayButtons addObject:@"Side Scroll"];
     [_arrayButtons addObject:@"Parallax"];
+    [_arrayButtons addObject:@"Flip"];
 }
 
 - (void)didReceiveMemoryWarning

@@ -80,6 +80,9 @@
 		2AE7456617B1729D00CB1205 /* iPodTouch.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE7456317B1729D00CB1205 /* iPodTouch.png */; };
 		2AE7456717B1729D00CB1205 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE7456417B1729D00CB1205 /* iPad.png */; };
 		2AE7456817B1729D00CB1205 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE7456517B1729D00CB1205 /* iPhone.png */; };
+		5B327C2617F2069600CD9206 /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B327C2517F2069600CD9206 /* FlipViewController.m */; };
+		5B327C2917F207C500CD9206 /* FlipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B327C2817F207C500CD9206 /* FlipCell.m */; };
+		5B327C2C17F2182B00CD9206 /* stars.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5B327C2B17F2182B00CD9206 /* stars.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +181,11 @@
 		2AE7456317B1729D00CB1205 /* iPodTouch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPodTouch.png; sourceTree = "<group>"; };
 		2AE7456417B1729D00CB1205 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
 		2AE7456517B1729D00CB1205 /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
+		5B327C2417F2069600CD9206 /* FlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipViewController.h; sourceTree = "<group>"; };
+		5B327C2517F2069600CD9206 /* FlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipViewController.m; sourceTree = "<group>"; };
+		5B327C2717F207C500CD9206 /* FlipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipCell.h; sourceTree = "<group>"; };
+		5B327C2817F207C500CD9206 /* FlipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipCell.m; sourceTree = "<group>"; };
+		5B327C2B17F2182B00CD9206 /* stars.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +327,7 @@
 				2A6EC94B17A833F800B3F427 /* GS */,
 				2A5785A817AADCD8008F8DEF /* SideScroller */,
 				1852F53817E098280074DC72 /* Parallax */,
+				5B327C2317F2063D00CD9206 /* Flip */,
 				2A6EC91117A8331900B3F427 /* Supporting Files */,
 			);
 			path = AnimationTest;
@@ -456,6 +465,26 @@
 			name = Media;
 			sourceTree = "<group>";
 		};
+		5B327C2317F2063D00CD9206 /* Flip */ = {
+			isa = PBXGroup;
+			children = (
+				5B327C2A17F2181B00CD9206 /* Media */,
+				5B327C2417F2069600CD9206 /* FlipViewController.h */,
+				5B327C2517F2069600CD9206 /* FlipViewController.m */,
+				5B327C2717F207C500CD9206 /* FlipCell.h */,
+				5B327C2817F207C500CD9206 /* FlipCell.m */,
+			);
+			name = Flip;
+			sourceTree = "<group>";
+		};
+		5B327C2A17F2181B00CD9206 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				5B327C2B17F2182B00CD9206 /* stars.jpeg */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -582,6 +611,7 @@
 				2A6FADE817B544D8005E330B /* sonic-jumping-5.png in Resources */,
 				2A6FADE917B544D8005E330B /* sonic-jumping-6.png in Resources */,
 				2A6FADEC17B54BC5005E330B /* JumpFX.mp3 in Resources */,
+				5B327C2C17F2182B00CD9206 /* stars.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +655,8 @@
 				1852F53B17E098800074DC72 /* ParallaxViewController.m in Sources */,
 				1852F53E17E098D10074DC72 /* MainViewController.m in Sources */,
 				1852F54217E0993D0074DC72 /* MainCell.m in Sources */,
+				5B327C2617F2069600CD9206 /* FlipViewController.m in Sources */,
+				5B327C2917F207C500CD9206 /* FlipCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
