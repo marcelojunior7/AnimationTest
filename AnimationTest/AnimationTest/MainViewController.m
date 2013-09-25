@@ -33,6 +33,7 @@
     [_arrayButtons addObject:@"Side Scroll"];
     [_arrayButtons addObject:@"Parallax"];
     [_arrayButtons addObject:@"Flip"];
+    [_arrayButtons addObject:@"Fade"];
 }
 
 - (void)didReceiveMemoryWarning

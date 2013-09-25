@@ -83,6 +83,7 @@
 		5B327C2617F2069600CD9206 /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B327C2517F2069600CD9206 /* FlipViewController.m */; };
 		5B327C2917F207C500CD9206 /* FlipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B327C2817F207C500CD9206 /* FlipCell.m */; };
 		5B327C2C17F2182B00CD9206 /* stars.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5B327C2B17F2182B00CD9206 /* stars.jpeg */; };
+		5B3F0A4017F37085001CC0A7 /* FadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F0A3F17F37085001CC0A7 /* FadeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +187,8 @@
 		5B327C2717F207C500CD9206 /* FlipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipCell.h; sourceTree = "<group>"; };
 		5B327C2817F207C500CD9206 /* FlipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipCell.m; sourceTree = "<group>"; };
 		5B327C2B17F2182B00CD9206 /* stars.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpeg; sourceTree = "<group>"; };
+		5B3F0A3E17F37085001CC0A7 /* FadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeViewController.h; sourceTree = "<group>"; };
+		5B3F0A3F17F37085001CC0A7 /* FadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +331,7 @@
 				2A5785A817AADCD8008F8DEF /* SideScroller */,
 				1852F53817E098280074DC72 /* Parallax */,
 				5B327C2317F2063D00CD9206 /* Flip */,
+				5B3F0A3D17F3706F001CC0A7 /* Fade */,
 				2A6EC91117A8331900B3F427 /* Supporting Files */,
 			);
 			path = AnimationTest;
@@ -483,6 +487,15 @@
 				5B327C2B17F2182B00CD9206 /* stars.jpeg */,
 			);
 			name = Media;
+			sourceTree = "<group>";
+		};
+		5B3F0A3D17F3706F001CC0A7 /* Fade */ = {
+			isa = PBXGroup;
+			children = (
+				5B3F0A3E17F37085001CC0A7 /* FadeViewController.h */,
+				5B3F0A3F17F37085001CC0A7 /* FadeViewController.m */,
+			);
+			name = Fade;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -657,6 +670,7 @@
 				1852F54217E0993D0074DC72 /* MainCell.m in Sources */,
 				5B327C2617F2069600CD9206 /* FlipViewController.m in Sources */,
 				5B327C2917F207C500CD9206 /* FlipCell.m in Sources */,
+				5B3F0A4017F37085001CC0A7 /* FadeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

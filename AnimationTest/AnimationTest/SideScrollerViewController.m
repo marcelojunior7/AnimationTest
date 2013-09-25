@@ -334,8 +334,7 @@
         {
             _currentX = [[[_viewAnimation subviews] objectAtIndex:2] frame].origin.x;
             _isTapped = YES;
-            NSArray *imageNames = @[@"sonic-jumping-1.png", @"sonic-jumping-2.png", @"sonic-jumping-3.png", @"sonic-jumping-4.png",
-                                    @"sonic-jumping-5.png", @"sonic-jumping-6.png"];
+            NSArray *imageNames = @[@"sonic-jumping-1.png", @"sonic-jumping-2.png", @"sonic-jumping-3.png", @"sonic-jumping-4.png", @"sonic-jumping-5.png", @"sonic-jumping-6.png"];
             
             NSMutableArray *images = [[NSMutableArray alloc] init];
             
@@ -391,8 +390,7 @@
                        }
                       completion:^(BOOL finished)
                        {
-                           NSArray *spriteImageNames = @[@"sonic-running-1.png", @"sonic-running-2.png", @"sonic-running-3.png", @"sonic-running-4.png",
-                                                         @"sonic-running-5.png"];
+                           NSArray *spriteImageNames = @[@"sonic-running-1.png", @"sonic-running-2.png", @"sonic-running-3.png", @"sonic-running-4.png", @"sonic-running-5.png"];
                            
                            NSMutableArray *spriteImages = [[NSMutableArray alloc] init];
                            
