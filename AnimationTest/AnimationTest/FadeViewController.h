@@ -11,9 +11,9 @@
 
 @interface FadeViewController : UIViewController
 
-@property (nonatomic) bool isButtonTextWhite;
-@property (nonatomic) bool shouldChangeButtonTextColor;
+@property (nonatomic) bool isButtonTextWhite, shouldChangeButtonTextColor, isDragging;
 
 @property (strong, nonatomic) UIButton *button;
+@property (strong, nonatomic) UIView *roundView;
 
 @end

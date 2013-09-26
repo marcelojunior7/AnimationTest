@@ -51,6 +51,7 @@
     
     [[self view] addSubview:view];
     
+    [view setAlpha:0];
     
     // BUTTON ==========================================================================
     
@@ -65,13 +66,23 @@
     _isButtonTextWhite = YES;
     _shouldChangeButtonTextColor = YES;
     
-    [self changeButtonTextColorWithinSeconds:@"10.5"];
+//    [self changeButtonTextColorWithinSeconds:@"10.5"];
     
     [view addSubview:button];
+    
+    [self showInitView];
 }
 
 
 #pragma Animations
+
+- (void)showInitView
+{
+    [UIView animateWithDuration:0.5 animations:^
+     {
+         [[[[self view] subviews] objectAtIndex:0] setAlpha:1];
+     } completion:nil];
+}
 
 - (void)changeButtonTextColorWithinSeconds:(NSString *)secs
 {
@@ -102,7 +113,7 @@
 
 - (void)beginBallAnimation
 {
-    [UIView animateWithDuration:1.5 animations:^
+    [UIView animateWithDuration:0.9 animations:^
      {
          [[[[self view] subviews] objectAtIndex:0] setAlpha:0];
      }
@@ -110,14 +121,54 @@
      {
          [[[[self view] subviews] objectAtIndex:0] removeFromSuperview];
          
-         [self createRoundViews];
+         [self createRoundView];
      }];
 }
 
-- (void)createRoundViews
+- (void)createRoundView
 {
+    // VIEW ======================================================
     
+    int height = (self.view.frame.size.height * 0.5) - 40;
+    int width = (self.view.frame.size.width / 2) - 40;
+    
+    UIView *roundView = [[UIView alloc] initWithFrame:CGRectMake(width, height, 80, 80)];
+    
+    [roundView setClipsToBounds:NO];
+    [[roundView layer] setShadowColor:[[UIColor blackColor] CGColor]];
+    [[roundView layer] setShadowOffset:CGSizeMake(0,6)];
+    [[roundView layer] setShadowRadius:0.8];
+    [[roundView layer] setShadowOpacity:0.3];
+    
+    [[roundView layer] setBorderColor:[UIColor darkGrayColor].CGColor];
+    [[roundView layer] setBorderWidth:3.0f];
+    
+    [roundView setBackgroundColor:[UIColor lightGrayColor]];
+    
+    [self makeViewRound:roundView withRadius:40];
+    
+    [roundView setAlpha:0];
+    
+    _roundView = roundView;
+    
+    [[self view] addSubview:roundView];
+    
+    [self showRoundView];
+    
+    UITapGestureRecognizer* doubleTap = [[UITapGestureRecognizer alloc] initWithTarget : self action : @selector (handleDoubleTap:)];
+    [doubleTap setDelaysTouchesBegan: YES];
+    [doubleTap setNumberOfTapsRequired: 2];
+    [roundView addGestureRecognizer: doubleTap];
 }
+
+- (void)showRoundView
+{
+    [UIView animateWithDuration:0.5 animations:^
+     {
+         [_roundView setAlpha:1];
+     } completion:nil];
+}
+
 
 #pragma Round
 
@@ -128,6 +179,86 @@
     [round setCornerRadius:radius];
     
     return view;
+}
+
+
+#pragma touch
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint touchGeral = [touch locationInView:self.view];
+    
+    if (CGRectContainsPoint(_roundView.frame, touchGeral))
+    {
+        _isDragging = YES;
+    }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    _isDragging = NO;
+    
+    CGRect frame = _roundView.frame;
+    
+    if ((frame.origin.x + frame.size.width / 2) > (self.view.frame.size.width / 2))
+    {
+        frame.origin.x = (self.view.frame.size.width * 0.9) - (frame.size.width / 2);
+    }
+    else
+    {
+        frame.origin.x = (self.view.frame.size.width * 0.1) - (frame.size.width / 2);
+    }
+    
+    [UIView animateWithDuration:0.35 animations:^
+     {
+         _roundView.frame = frame;
+     }
+    completion:nil];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint touchLocation = [touch locationInView:self.view];
+    
+    CGRect frame = _roundView.frame;
+    
+    if (_isDragging)
+    {
+        frame.origin.x = touchLocation.x - (frame.size.width / 2);
+        frame.origin.y = touchLocation.y - (frame.size.height / 2);
+
+        _roundView.frame = frame;
+    }
+    
+    
+    if ((frame.origin.x + frame.size.width / 2) > (self.view.frame.size.width / 2))
+    {
+        // SHOW RIGHT GRADIENT
+    }
+    else
+    {
+        // SHOW LEFT GRADIENT
+    }
+}
+
+
+#pragma handlers
+
+- (void)handleDoubleTap:(UIGestureRecognizer*)sender
+{
+    [UIView animateWithDuration:0.35 animations:^
+     {
+         [_roundView setAlpha:0];
+     }
+                     completion:^(BOOL finished)
+                        {
+                         [_roundView removeFromSuperview];
+                         [self createInitSubviews];
+                     }];
+    
+    
 }
 
 @end
