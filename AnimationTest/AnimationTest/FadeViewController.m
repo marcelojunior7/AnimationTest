@@ -41,7 +41,7 @@
 {
     // VIEW ===========================================================================
     
-    int height = (self.view.frame.size.height * 0.8) - 40;
+    int height = (self.view.frame.size.height * 0.5) - 40;
     int width = (self.view.frame.size.width / 2) - 100;
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(width, height, 200, 80)];
@@ -60,6 +60,7 @@
     _button = button;
     
     [button setTitle:@"Tap here to start" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     
     [button addTarget:self action:@selector(beginBallAnimation) forControlEvents:UIControlEventTouchUpInside];
     
@@ -81,7 +82,8 @@
     [UIView animateWithDuration:0.5 animations:^
      {
          [[[[self view] subviews] objectAtIndex:0] setAlpha:1];
-     } completion:nil];
+     }
+    completion:nil];
 }
 
 - (void)changeButtonTextColorWithinSeconds:(NSString *)secs
@@ -108,7 +110,8 @@
          {
              [self performSelector:@selector(changeButtonTextColorWithinSeconds:) withObject:secs afterDelay:1.5];
          }
-     }];
+     }
+    ];
 }
 
 - (void)beginBallAnimation
@@ -120,9 +123,9 @@
     completion:^(BOOL finished)
      {
          [[[[self view] subviews] objectAtIndex:0] removeFromSuperview];
-         
          [self createRoundView];
-     }];
+     }
+    ];
 }
 
 - (void)createRoundView
@@ -134,11 +137,17 @@
     
     UIView *roundView = [[UIView alloc] initWithFrame:CGRectMake(width, height, 80, 80)];
     
+    
+    // SHADOW ====================================================
+    
     [roundView setClipsToBounds:NO];
     [[roundView layer] setShadowColor:[[UIColor blackColor] CGColor]];
     [[roundView layer] setShadowOffset:CGSizeMake(0,6)];
     [[roundView layer] setShadowRadius:0.8];
     [[roundView layer] setShadowOpacity:0.3];
+    
+    
+    // BORDER & COLOR ============================================
     
     [[roundView layer] setBorderColor:[UIColor darkGrayColor].CGColor];
     [[roundView layer] setBorderWidth:3.0f];
@@ -149,16 +158,26 @@
     
     [roundView setAlpha:0];
     
-    _roundView = roundView;
     
-    [[self view] addSubview:roundView];
-    
-    [self showRoundView];
+    // ACTIONS ==================================================
     
     UITapGestureRecognizer* doubleTap = [[UITapGestureRecognizer alloc] initWithTarget : self action : @selector (handleDoubleTap:)];
     [doubleTap setDelaysTouchesBegan: YES];
     [doubleTap setNumberOfTapsRequired: 2];
     [roundView addGestureRecognizer: doubleTap];
+    
+    UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] initWithTarget : self action : @selector (handleSingleTap:)];
+    [singleTap setDelaysTouchesBegan: YES];
+    [singleTap setNumberOfTapsRequired: 1];
+    [roundView addGestureRecognizer: singleTap];
+    
+    // FINAL SETS ===============================================
+    
+    _roundView = roundView;
+    
+    [[self view] addSubview:roundView];
+    
+    [self showRoundView];
 }
 
 - (void)showRoundView
@@ -166,7 +185,8 @@
     [UIView animateWithDuration:0.5 animations:^
      {
          [_roundView setAlpha:1];
-     } completion:nil];
+     }
+    completion:nil];
 }
 
 
@@ -175,6 +195,7 @@
 - (UIView *)makeViewRound:(UIView *)view withRadius:(int)radius
 {
     CALayer *round = [view layer];
+    
     [round setMasksToBounds:YES];
     [round setCornerRadius:radius];
     
@@ -210,7 +231,7 @@
         frame.origin.x = (self.view.frame.size.width * 0.1) - (frame.size.width / 2);
     }
     
-    [UIView animateWithDuration:0.35 animations:^
+    [UIView animateWithDuration:0.25 animations:^
      {
          _roundView.frame = frame;
      }
@@ -232,7 +253,6 @@
         _roundView.frame = frame;
     }
     
-    
     if ((frame.origin.x + frame.size.width / 2) > (self.view.frame.size.width / 2))
     {
         // SHOW RIGHT GRADIENT
@@ -252,13 +272,25 @@
      {
          [_roundView setAlpha:0];
      }
-                     completion:^(BOOL finished)
-                        {
-                         [_roundView removeFromSuperview];
-                         [self createInitSubviews];
-                     }];
+    completion:^(BOOL finished)
+     {
+         [_roundView removeFromSuperview];
+         [self createInitSubviews];
+     }
+    ];
+}
+
+- (void)handleSingleTap:(UIGestureRecognizer*)sender
+{
+    CGRect frame = _roundView.frame;
+    frame.origin.x = (self.view.frame.size.width * 0.5) - (frame.size.width / 2);
+    frame.origin.y = (self.view.frame.size.height * 0.5) - (frame.size.height / 2);
     
-    
+    [UIView animateWithDuration:0.25 animations:^
+     {
+         _roundView.frame = frame;
+     }
+    completion:nil];
 }
 
 @end
