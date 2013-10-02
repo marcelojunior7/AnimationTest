@@ -55,15 +55,15 @@
     
     CALayer *viewLayer = [[cell viewButton] layer];
     
-    // ADDING SHADOW
+    // ADDING SHADOW ==========================================================================
     [viewLayer setShadowColor:[[UIColor blackColor] CGColor]];
     [viewLayer setShadowOffset:CGSizeMake(0,4)];
     [viewLayer setShadowOpacity:0.3];
     
-    // MAKING ROUND
+    // MAKING ROUND ===========================================================================
     [viewLayer setCornerRadius:2.9];
     
-    // SETTING TEXT
+    // SETTING TEXT ===========================================================================
     [[cell lblButton] setText:[_arrayButtons objectAtIndex:indexPath.row]];
     
     return cell;
