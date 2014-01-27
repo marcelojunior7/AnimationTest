@@ -84,6 +84,7 @@
 		5B327C2917F207C500CD9206 /* FlipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B327C2817F207C500CD9206 /* FlipCell.m */; };
 		5B327C2C17F2182B00CD9206 /* stars.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5B327C2B17F2182B00CD9206 /* stars.jpeg */; };
 		5B3F0A4017F37085001CC0A7 /* FadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F0A3F17F37085001CC0A7 /* FadeViewController.m */; };
+		5BC0E69B18967B8A002E634A /* SwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0E69A18967B8A002E634A /* SwapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +101,7 @@
 		1852F53917E098800074DC72 /* ParallaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxViewController.h; sourceTree = "<group>"; };
 		1852F53A17E098800074DC72 /* ParallaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxViewController.m; sourceTree = "<group>"; };
 		1852F53C17E098D10074DC72 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		1852F53D17E098D10074DC72 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1852F53D17E098D10074DC72 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MainViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1852F54017E0993D0074DC72 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
 		1852F54117E0993D0074DC72 /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
 		2A57150117B3F07000BB865B /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
@@ -113,7 +114,7 @@
 		2A57150B17B3F5E000BB865B /* sonic-running-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sonic-running-6.png"; sourceTree = "<group>"; };
 		2A57151217B4402200BB865B /* Sonic Sprites RAW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sonic Sprites RAW.png"; sourceTree = "<group>"; };
 		2A5785AE17AADD78008F8DEF /* SideScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideScrollerViewController.h; sourceTree = "<group>"; };
-		2A5785AF17AADD78008F8DEF /* SideScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideScrollerViewController.m; sourceTree = "<group>"; };
+		2A5785AF17AADD78008F8DEF /* SideScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SideScrollerViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2A6EC90717A8331900B3F427 /* AnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6EC90A17A8331900B3F427 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2A6EC90C17A8331900B3F427 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,16 +131,16 @@
 		2A6EC92317A8331900B3F427 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		2A6EC92617A8331A00B3F427 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		2A6EC92817A8331A00B3F427 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		2A6EC92917A8331A00B3F427 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		2A6EC92917A8331A00B3F427 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MasterViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2A6EC92B17A8331A00B3F427 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		2A6EC92C17A8331A00B3F427 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2A6EC92C17A8331A00B3F427 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2A6EC93317A8331A00B3F427 /* AnimationTestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationTestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6EC93C17A8331A00B3F427 /* AnimationTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnimationTestTests-Info.plist"; sourceTree = "<group>"; };
 		2A6EC93E17A8331A00B3F427 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A6EC94017A8331A00B3F427 /* AnimationTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationTestTests.h; sourceTree = "<group>"; };
 		2A6EC94117A8331A00B3F427 /* AnimationTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationTestTests.m; sourceTree = "<group>"; };
 		2A6EC94C17A8340C00B3F427 /* ImageAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAnimationViewController.h; sourceTree = "<group>"; };
-		2A6EC94D17A8340C00B3F427 /* ImageAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAnimationViewController.m; sourceTree = "<group>"; };
+		2A6EC94D17A8340C00B3F427 /* ImageAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ImageAnimationViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2A6EC95217A8343500B3F427 /* win_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_1.png; sourceTree = "<group>"; };
 		2A6EC95317A8343500B3F427 /* win_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_2.png; sourceTree = "<group>"; };
 		2A6EC95417A8343500B3F427 /* win_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_3.png; sourceTree = "<group>"; };
@@ -183,12 +184,14 @@
 		2AE7456417B1729D00CB1205 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad.png; sourceTree = "<group>"; };
 		2AE7456517B1729D00CB1205 /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
 		5B327C2417F2069600CD9206 /* FlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipViewController.h; sourceTree = "<group>"; };
-		5B327C2517F2069600CD9206 /* FlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipViewController.m; sourceTree = "<group>"; };
+		5B327C2517F2069600CD9206 /* FlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FlipViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5B327C2717F207C500CD9206 /* FlipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipCell.h; sourceTree = "<group>"; };
 		5B327C2817F207C500CD9206 /* FlipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipCell.m; sourceTree = "<group>"; };
 		5B327C2B17F2182B00CD9206 /* stars.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpeg; sourceTree = "<group>"; };
 		5B3F0A3E17F37085001CC0A7 /* FadeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeViewController.h; sourceTree = "<group>"; };
-		5B3F0A3F17F37085001CC0A7 /* FadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadeViewController.m; sourceTree = "<group>"; };
+		5B3F0A3F17F37085001CC0A7 /* FadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FadeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5BC0E69918967B8A002E634A /* SwapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwapViewController.h; sourceTree = "<group>"; };
+		5BC0E69A18967B8A002E634A /* SwapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +335,7 @@
 				1852F53817E098280074DC72 /* Parallax */,
 				5B327C2317F2063D00CD9206 /* Flip */,
 				5B3F0A3D17F3706F001CC0A7 /* Fade */,
+				5BC0E69818967B65002E634A /* Swap */,
 				2A6EC91117A8331900B3F427 /* Supporting Files */,
 			);
 			path = AnimationTest;
@@ -498,6 +502,15 @@
 			name = Fade;
 			sourceTree = "<group>";
 		};
+		5BC0E69818967B65002E634A /* Swap */ = {
+			isa = PBXGroup;
+			children = (
+				5BC0E69918967B8A002E634A /* SwapViewController.h */,
+				5BC0E69A18967B8A002E634A /* SwapViewController.m */,
+			);
+			name = Swap;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -662,6 +675,7 @@
 				2A6EC91717A8331900B3F427 /* main.m in Sources */,
 				2A6EC91B17A8331900B3F427 /* AppDelegate.m in Sources */,
 				2A6EC92A17A8331A00B3F427 /* MasterViewController.m in Sources */,
+				5BC0E69B18967B8A002E634A /* SwapViewController.m in Sources */,
 				2A6EC92D17A8331A00B3F427 /* DetailViewController.m in Sources */,
 				2A6EC94E17A8340C00B3F427 /* ImageAnimationViewController.m in Sources */,
 				2A5785B017AADD78008F8DEF /* SideScrollerViewController.m in Sources */,

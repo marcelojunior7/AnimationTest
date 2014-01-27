@@ -40,7 +40,7 @@
     _sidescrollTimer = nil;
     
     
-    // VARIABLES INITIALIZATION ============================================================================================
+    // AUDIO VARIABLES INITIALIZATION ============================================================================================
     NSString *audioFile = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], @"JumpFX.mp3"];
     NSData *audioData = [NSData dataWithContentsOfMappedFile:audioFile];
     
@@ -87,7 +87,7 @@
 }
 
 
-#pragma orientation
+#pragma mark - orientation
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
@@ -136,7 +136,7 @@
 }
 
 
-#pragma Alerta
+#pragma mark - Alerta
 
 - (void)showPortraitAlert
 {
@@ -234,7 +234,7 @@
 }
 
 
-#pragma Animation
+#pragma mark - Animation
 
 - (void)createAnimationView
 {
@@ -322,7 +322,7 @@
 }
 
 
-#pragma actions
+#pragma mark - actions
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
 {

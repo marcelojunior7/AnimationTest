@@ -37,7 +37,7 @@
 }
 
 
-#pragma Collection
+#pragma mark - Collection
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

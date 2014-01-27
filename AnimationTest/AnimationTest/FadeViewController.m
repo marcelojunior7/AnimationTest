@@ -35,7 +35,7 @@
 }
 
 
-#pragma Initialization
+#pragma mark - Initialization
 
 - (void)createInitSubviews
 {
@@ -75,7 +75,7 @@
 }
 
 
-#pragma Animations
+#pragma mark - Animations
 
 - (void)showInitView
 {
@@ -190,7 +190,7 @@
 }
 
 
-#pragma Round
+#pragma mark - Round
 
 - (UIView *)makeViewRound:(UIView *)view withRadius:(int)radius
 {
@@ -203,7 +203,7 @@
 }
 
 
-#pragma touch
+#pragma mark - touch
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -264,7 +264,7 @@
 }
 
 
-#pragma handlers
+#pragma mark - handlers
 
 - (void)handleDoubleTap:(UIGestureRecognizer*)sender
 {

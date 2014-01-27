@@ -34,6 +34,7 @@
     [_arrayButtons addObject:@"Parallax"];
     [_arrayButtons addObject:@"Flip"];
     [_arrayButtons addObject:@"Fade"];
+    [_arrayButtons addObject:@"Swap"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +43,7 @@
 }
 
 
-#pragma Collection
+#pragma mark - Collection
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

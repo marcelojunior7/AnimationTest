@@ -72,7 +72,7 @@
 }
 
 
-#pragma image
+#pragma mark - image
 
 - (void)imageAnimationWithFade:(bool)fade
 {
@@ -211,7 +211,7 @@
 }
 
 
-#pragma slider
+#pragma mark - slider
 
 - (IBAction)sliderChanged:(id)sender
 {
@@ -222,7 +222,7 @@
 }
 
 
-#pragma buttons
+#pragma mark - buttons
 
 - (IBAction)btnPlay:(id)sender
 {
@@ -298,7 +298,7 @@
 }
 
 
-#pragma orientation
+#pragma mark - orientation
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
@@ -318,7 +318,7 @@
 }
 
 
-#pragma music
+#pragma mark - music
 
 - (void)playSound
 {
@@ -466,7 +466,7 @@
  */
 
 
-#pragma touch
+#pragma mark - touch
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -530,7 +530,7 @@
 }
 
 
-#pragma handlers
+#pragma mark - handlers
 
 - (void)handleDoubleTap:(UIGestureRecognizer*)sender
 {
@@ -562,7 +562,7 @@
 }
 
 
-#pragma modo
+#pragma mark - modo
 
 - (void)changeMode
 {
