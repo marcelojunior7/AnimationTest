@@ -33,6 +33,8 @@
     
     [_viewItem removeFromSuperview];
     [self.view insertSubview:_viewItem aboveSubview:_viewSwap];
+    
+    _viewItem.autoresizesSubviews = YES;
 }
 
 - (void)didReceiveMemoryWarning

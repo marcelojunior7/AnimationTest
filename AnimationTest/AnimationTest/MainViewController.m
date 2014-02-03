@@ -35,6 +35,8 @@
     [_arrayButtons addObject:@"Flip"];
     [_arrayButtons addObject:@"Fade"];
     [_arrayButtons addObject:@"Swap"];
+    [_arrayButtons addObject:@"3D"];
+    [_arrayButtons addObject:@"Mail"];
 }
 
 - (void)didReceiveMemoryWarning

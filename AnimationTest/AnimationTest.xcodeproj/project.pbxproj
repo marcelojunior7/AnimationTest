@@ -85,6 +85,8 @@
 		5B327C2C17F2182B00CD9206 /* stars.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5B327C2B17F2182B00CD9206 /* stars.jpeg */; };
 		5B3F0A4017F37085001CC0A7 /* FadeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F0A3F17F37085001CC0A7 /* FadeViewController.m */; };
 		5BC0E69B18967B8A002E634A /* SwapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0E69A18967B8A002E634A /* SwapViewController.m */; };
+		5BC0E6A51896BF3C002E634A /* ThreeDeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0E6A41896BF3C002E634A /* ThreeDeeViewController.m */; };
+		5BC0E6A91896CE45002E634A /* MailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0E6A81896CE45002E634A /* MailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +194,10 @@
 		5B3F0A3F17F37085001CC0A7 /* FadeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FadeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5BC0E69918967B8A002E634A /* SwapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwapViewController.h; sourceTree = "<group>"; };
 		5BC0E69A18967B8A002E634A /* SwapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwapViewController.m; sourceTree = "<group>"; };
+		5BC0E6A31896BF3C002E634A /* ThreeDeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeDeeViewController.h; sourceTree = "<group>"; };
+		5BC0E6A41896BF3C002E634A /* ThreeDeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeDeeViewController.m; sourceTree = "<group>"; };
+		5BC0E6A71896CE45002E634A /* MailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailViewController.h; sourceTree = "<group>"; };
+		5BC0E6A81896CE45002E634A /* MailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +342,8 @@
 				5B327C2317F2063D00CD9206 /* Flip */,
 				5B3F0A3D17F3706F001CC0A7 /* Fade */,
 				5BC0E69818967B65002E634A /* Swap */,
+				5BC0E69F1896BC7C002E634A /* 3D */,
+				5BC0E6A61896CDEE002E634A /* Mail */,
 				2A6EC91117A8331900B3F427 /* Supporting Files */,
 			);
 			path = AnimationTest;
@@ -511,6 +519,24 @@
 			name = Swap;
 			sourceTree = "<group>";
 		};
+		5BC0E69F1896BC7C002E634A /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				5BC0E6A31896BF3C002E634A /* ThreeDeeViewController.h */,
+				5BC0E6A41896BF3C002E634A /* ThreeDeeViewController.m */,
+			);
+			name = 3D;
+			sourceTree = "<group>";
+		};
+		5BC0E6A61896CDEE002E634A /* Mail */ = {
+			isa = PBXGroup;
+			children = (
+				5BC0E6A71896CE45002E634A /* MailViewController.h */,
+				5BC0E6A81896CE45002E634A /* MailViewController.m */,
+			);
+			name = Mail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -673,6 +699,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A6EC91717A8331900B3F427 /* main.m in Sources */,
+				5BC0E6A51896BF3C002E634A /* ThreeDeeViewController.m in Sources */,
 				2A6EC91B17A8331900B3F427 /* AppDelegate.m in Sources */,
 				2A6EC92A17A8331A00B3F427 /* MasterViewController.m in Sources */,
 				5BC0E69B18967B8A002E634A /* SwapViewController.m in Sources */,
@@ -682,6 +709,7 @@
 				1852F53B17E098800074DC72 /* ParallaxViewController.m in Sources */,
 				1852F53E17E098D10074DC72 /* MainViewController.m in Sources */,
 				1852F54217E0993D0074DC72 /* MainCell.m in Sources */,
+				5BC0E6A91896CE45002E634A /* MailViewController.m in Sources */,
 				5B327C2617F2069600CD9206 /* FlipViewController.m in Sources */,
 				5B327C2917F207C500CD9206 /* FlipCell.m in Sources */,
 				5B3F0A4017F37085001CC0A7 /* FadeViewController.m in Sources */,

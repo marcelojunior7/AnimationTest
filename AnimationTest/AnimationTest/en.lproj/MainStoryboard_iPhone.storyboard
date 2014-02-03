@@ -106,6 +106,8 @@
                         <segue destination="r2b-vg-ngm" kind="push" identifier="Flip" id="iMD-t9-otc"/>
                         <segue destination="S3b-xz-JzI" kind="push" identifier="Fade" id="xmp-Hp-uvE"/>
                         <segue destination="wsf-kE-YRE" kind="push" identifier="Swap" id="Btl-B9-6hg"/>
+                        <segue destination="DN8-At-qd5" kind="push" identifier="3D" id="2Jt-lx-W19"/>
+                        <segue destination="xrG-pG-ORc" kind="push" identifier="Mail" id="UZl-A0-Fmr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCu-YX-xB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,10 +151,10 @@
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="W8R-Kf-sHq" firstAttribute="bottom" secondItem="u1F-dq-uxg" secondAttribute="bottom" type="default" id="77V-yL-9nC"/>
-                                            <constraint firstItem="W8R-Kf-sHq" firstAttribute="top" secondItem="u1F-dq-uxg" secondAttribute="top" type="default" id="NqB-T3-8Ah"/>
-                                            <constraint firstItem="W8R-Kf-sHq" firstAttribute="leading" secondItem="u1F-dq-uxg" secondAttribute="leading" type="default" id="e11-1T-dUb"/>
-                                            <constraint firstItem="W8R-Kf-sHq" firstAttribute="trailing" secondItem="u1F-dq-uxg" secondAttribute="trailing" type="default" id="whW-x8-WRm"/>
+                                            <constraint firstItem="W8R-Kf-sHq" firstAttribute="centerY" secondItem="u1F-dq-uxg" secondAttribute="centerY" type="default" id="1PY-iM-CSa"/>
+                                            <constraint firstAttribute="trailing" secondItem="W8R-Kf-sHq" secondAttribute="trailing" type="default" id="E6X-3k-PCV"/>
+                                            <constraint firstAttribute="bottom" secondItem="W8R-Kf-sHq" secondAttribute="bottom" type="default" id="ZXL-AH-bAm"/>
+                                            <constraint firstItem="W8R-Kf-sHq" firstAttribute="leading" secondItem="u1F-dq-uxg" secondAttribute="leading" type="default" id="pjd-BF-z3U"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="viewItem" destination="W8R-Kf-sHq" id="4ra-kc-H4x"/>
@@ -184,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkZ-e9-tyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992" y="-827"/>
+            <point key="canvasLocation" x="1414" y="-765"/>
         </scene>
         <!--Image Animation View Controller-->
         <scene sceneID="XfC-9u-0eU">
@@ -312,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSi-EY-jqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992" y="-251"/>
+            <point key="canvasLocation" x="992" y="-765"/>
         </scene>
         <!--Fade View Controller-->
         <scene sceneID="W2r-30-TUu">
@@ -327,7 +329,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPp-rx-cI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1120" y="433"/>
+            <point key="canvasLocation" x="1036" y="95"/>
+        </scene>
+        <!--Three Dee View Controller-->
+        <scene sceneID="vLu-t9-hn8">
+            <objects>
+                <viewController id="DN8-At-qd5" customClass="ThreeDeeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="300-Md-GP7">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zcQ-Eu-AiB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5k-eS-sp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="166"/>
         </scene>
         <!--Swap View Controller-->
         <scene sceneID="NBp-Rp-NDL">
@@ -394,7 +411,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfN-TR-PXL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992" y="1037"/>
+            <point key="canvasLocation" x="1796" y="-765"/>
+        </scene>
+        <!--Mail View Controller-->
+        <scene sceneID="yHS-h6-W6o">
+            <objects>
+                <viewController id="xrG-pG-ORc" customClass="MailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T4z-Dp-6LB">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail sent!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="qwe-Ud-dao">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MgO-UB-ydR" userLabel="View - Mail">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="kUS-T4-x1z">
+                                        <rect key="frame" x="20" y="83" width="280" height="294"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="294" id="vn1-fN-9ah"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-Ft-GC4" userLabel="View - Bottom">
+                                        <rect key="frame" x="0.0" y="385" width="320" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r51-m5-77j" userLabel="View - Top">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0Kg-Ft-GC4" firstAttribute="top" secondItem="kUS-T4-x1z" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="0g2-XZ-FPh"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Kg-Ft-GC4" secondAttribute="bottom" type="default" id="10c-2G-dXW"/>
+                                    <constraint firstItem="kUS-T4-x1z" firstAttribute="leading" secondItem="MgO-UB-ydR" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1M9-JK-GFv"/>
+                                    <constraint firstItem="0Kg-Ft-GC4" firstAttribute="leading" secondItem="r51-m5-77j" secondAttribute="leading" type="default" id="3m8-4k-JUA"/>
+                                    <constraint firstItem="kUS-T4-x1z" firstAttribute="top" secondItem="r51-m5-77j" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7QR-Lg-cPj"/>
+                                    <constraint firstItem="kUS-T4-x1z" firstAttribute="centerX" secondItem="r51-m5-77j" secondAttribute="centerX" type="default" id="GKN-lo-5oS"/>
+                                    <constraint firstItem="r51-m5-77j" firstAttribute="top" secondItem="MgO-UB-ydR" secondAttribute="top" type="default" id="WjD-8S-58l"/>
+                                    <constraint firstItem="0Kg-Ft-GC4" firstAttribute="leading" secondItem="MgO-UB-ydR" secondAttribute="leading" type="default" id="cR2-fF-guk"/>
+                                    <constraint firstItem="kUS-T4-x1z" firstAttribute="centerY" secondItem="MgO-UB-ydR" secondAttribute="centerY" type="default" id="h1Y-iM-MPd"/>
+                                    <constraint firstItem="0Kg-Ft-GC4" firstAttribute="trailing" secondItem="r51-m5-77j" secondAttribute="trailing" type="default" id="h9W-eM-joI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qwe-Ud-dao" firstAttribute="top" secondItem="T4z-Dp-6LB" secondAttribute="top" type="default" id="56C-fB-4LI"/>
+                            <constraint firstItem="MgO-UB-ydR" firstAttribute="leading" secondItem="T4z-Dp-6LB" secondAttribute="leading" type="default" id="8NB-ui-MZS"/>
+                            <constraint firstItem="MgO-UB-ydR" firstAttribute="leading" secondItem="qwe-Ud-dao" secondAttribute="leading" type="default" id="9jp-Lc-LC5"/>
+                            <constraint firstItem="MgO-UB-ydR" firstAttribute="bottom" secondItem="qwe-Ud-dao" secondAttribute="bottom" type="default" id="Hqy-8a-2wt"/>
+                            <constraint firstAttribute="bottom" secondItem="MgO-UB-ydR" secondAttribute="bottom" type="default" id="JTh-p6-jaK"/>
+                            <constraint firstItem="MgO-UB-ydR" firstAttribute="trailing" secondItem="qwe-Ud-dao" secondAttribute="trailing" type="default" id="Mvh-41-C2i"/>
+                            <constraint firstItem="MgO-UB-ydR" firstAttribute="top" secondItem="qwe-Ud-dao" secondAttribute="top" type="default" id="nQK-fT-o8R"/>
+                            <constraint firstAttribute="trailing" secondItem="MgO-UB-ydR" secondAttribute="trailing" type="default" id="tqm-2z-1Gk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gzb-Jh-UVs"/>
+                    <connections>
+                        <outlet property="labelMailSent" destination="qwe-Ud-dao" id="AfW-Ho-b6w"/>
+                        <outlet property="labelMailText" destination="kUS-T4-x1z" id="uZX-NN-O1t"/>
+                        <outlet property="viewEnvelopeBot" destination="0Kg-Ft-GC4" id="Lxk-bK-Ah0"/>
+                        <outlet property="viewEnvelopeTop" destination="r51-m5-77j" id="sy5-rA-iM8"/>
+                        <outlet property="viewMail" destination="MgO-UB-ydR" id="iVA-Oz-9FU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggy-gD-1Hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2184" y="-765"/>
         </scene>
         <!--Side Scroller View Controller-->
         <scene sceneID="VN2-sc-Equ">
@@ -409,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5M9-U7-wsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992" y="335"/>
+            <point key="canvasLocation" x="1008" y="64"/>
         </scene>
         <!--Parallax View Controller-->
         <scene sceneID="qQi-TK-zAK">
@@ -424,7 +521,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y25-gy-Y0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1051" y="386"/>
+            <point key="canvasLocation" x="1081" y="128"/>
         </scene>
     </scenes>
     <resources>
